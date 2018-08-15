@@ -1,0 +1,54 @@
+﻿@model AwesomeOrganiser.Models.Task
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskDueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsComplete)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsComplete)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskComments)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaskComments)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TaskId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,21 @@
+﻿@{
+    @model HomeViewModel
+}
+<h1>@Model.PageTitle</h1><hr />
+
+@foreach (var task in Model.Tasks)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@task.TaskId"> @task.TaskTitle</a>
+                </h3>
+                <p>@task.TaskDescription</p>
+            </div>
+        </div>
+    </div>
+}
+
+
+
