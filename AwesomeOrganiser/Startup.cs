@@ -72,6 +72,9 @@ namespace AwesomeOrganiser
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
+                   name: "EditTask",
+                   template: "{controller=Home}/{action=EditTask}/job/{taskid?}");
+                routes.MapRoute(
                    name: "createtask",
                    template: "{controller=Home}/{action=Index}");
             });

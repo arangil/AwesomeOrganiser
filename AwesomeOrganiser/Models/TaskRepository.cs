@@ -23,6 +23,13 @@ namespace AwesomeOrganiser.Models
             _appDbContext.SaveChanges();
         }
 
+        public void UpdateTask(Task task)
+        {
+            task.ModifiedDate = DateTime.Now;
+            _appDbContext.Tasks.Update(task);
+            _appDbContext.SaveChanges();
+        }
+
         public IEnumerable<Task> GetAllTasks()
         {
             return _appDbContext.Tasks;

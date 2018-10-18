@@ -49,6 +49,8 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.TaskId">Edit</a> |
+    <a asp-action="EditTask" asp-route-id="job/@Model.TaskId">Edit</a> |
+    <a asp-controller="Home" asp-action="EditTask2"  asp-route-id="@Model.TaskId">Edit This</a>
+    <a asp-controller="Home"  asp-action="EditTask" asp-route-id="'job/'@Model.TaskId">Edit This Too</a>
     <a asp-action="Index">Back to List</a>
 </div>

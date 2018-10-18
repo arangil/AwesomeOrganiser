@@ -8,5 +8,6 @@ namespace AwesomeOrganiser.Models
         IEnumerable<Task> GetAllTasks();
         Task GetTaskById(int taskId);
         void AddTask(Task task);
+        void UpdateTask(Task task);
     }
 }

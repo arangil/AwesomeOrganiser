@@ -42,5 +42,10 @@ namespace AwesomeOrganiser.Models
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateTask(Task task)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

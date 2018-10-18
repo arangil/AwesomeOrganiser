@@ -40,6 +40,26 @@ namespace AwesomeOrganiser.Controllers
             _taskRepository.AddTask(task);
             return RedirectToAction("Index");
         }
+       
+        public IActionResult EditTask(int taskid)
+        {
+            var task = _taskRepository.GetTaskById(taskid);
+            return View(task);
+        }
+        public IActionResult EditTask2(int id)
+        {
+            var task = _taskRepository.GetTaskById(id);
+            return View("EditTask", task);
+        }
+
+
+        [HttpPost]
+        public IActionResult EditTask(Task task)
+        {
+            _taskRepository.UpdateTask(task);
+            return RedirectToAction("Index");
+        }
+
 
         public IActionResult Details(int id)
         {
